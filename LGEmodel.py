@@ -37,7 +37,7 @@ class LGEmodel(tk.Tk):
         #for frame in self.frames.values():
         #    frame.grid_forget()
         frame = self.frames[cont]
-        if cont == PlotPage:
+        if cont == PlotPage or cont == ResultPage:
             frame.update()
         frame.tkraise()
     def get_page(self, page_class):
@@ -310,12 +310,56 @@ class ResultPage(tk.Frame):
     
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
+        self.controller = controller
         label = tk.Label(self, text="ResultPage", font=LL_FONT)
         label.pack(pady=10, padx=10)
-        
+        plotpage = self.controller.get_page(PlotPage)
+        try:
+            self.m = plotpage.m.get()
+            label1 = tk.Label(self, text="m should be"+str(self.m), font=LARGE_FONT)
+        except:
+            pass
+            label1 = tk.Label(self, text="m didnt pass to this page", font=LARGE_FONT)
+        #label1 = tk.Label(self, text="m should be"+str(m), font=LARGE_FONT)
+        self.label1 = label1
+        label1.pack()
+
+
+        self.fig = Figure(figsize=(5,5), dpi=100)
+        #self.a = self.fig.add_subplot(111, xlabel='IR', ylabel='GH')
+        self.a = self.fig.add_subplot(111)
+        #self.a.plot(self.y,self.x)
+        self.a.set_ylabel('K')
+        self.a.set_xlabel('Ionic Concentration(mM)')
+        #self.fig.legend("GH = %10.5f * IR + %10.5f"%(self.m, self.n), loc=0)
+        canvas = FigureCanvasTkAgg(self.fig, self)
+        self.canvas = canvas
+        self.canvas.draw()
+        canvas_widget = canvas.get_tk_widget()
+        self.canvas_widget = canvas_widget
+        canvas_widget.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+
+        toolbar = NavigationToolbar2TkAgg(canvas, self)
+        toolbar.update()
+        canvas._tkcanvas.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+
         
         button1 = ttk.Button(self, text="Back to Home",command=lambda: controller.show_frame(StartPage))
         button1.pack(side='bottom')
+
+    def update(self):
+        plotpage = self.controller.get_page(PlotPage)
+        self.m = float(plotpage.m)
+        self.n = float(plotpage.n)
+        self.B = self.m - 1
+        self.IC = 105.58 * 0.11 # This value needs further modification.
+        self.Keq = np.power(10,-self.n/(self.m*np.power(self.IC,self.B)))
+        self.label1['text']="slope should be %10.5f and interception should be %10.5f, Keq should be %10.5f"%(self.m, self.n, self.Keq)
+
+
+
+
 app = LGEmodel()
 app.geometry('1280x720')
 #
