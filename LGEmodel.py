@@ -76,80 +76,89 @@ class InputPage(tk.Frame):
         
         
 
-        label_GH1 = tk.Label(self, text="GH_1", font=LARGE_FONT)
+        label_GH1 = ttk.Label(self, text="GH_1", font=LARGE_FONT)
         label_GH1.place(x=50,y=50)
-        label_GH1unit = tk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
+        label_GH1unit = ttk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
         label_GH1unit.place(x=300,y=50)
-        label_IR1 = tk.Label(self, text="IR_1", font=LARGE_FONT)
+        label_IR1 = ttk.Label(self, text="IR_1", font=LARGE_FONT)
         label_IR1.place(x=500,y=50) 
-        label_IR1unit = tk.Label(self, text="mol/L", font=LARGE_FONT)
+        label_IR1unit = ttk.Label(self, text="mol/L", font=LARGE_FONT)
         label_IR1unit.place(x=750,y=50)
         self.GH1 = tk.StringVar()
         self.IR1 = tk.StringVar()
         
-        entry_GH1 = tk.Entry(self,textvariable=self.GH1)
-        entry_GH1.place(x=90, y=50)
-        entry_IR1 = tk.Entry(self, textvariable=self.IR1)
-        entry_IR1.place(x=540, y=50)
+        entry_GH1 = ttk.Entry(self,textvariable=self.GH1)
+        entry_GH1.place(x=100, y=50)
+        entry_IR1 = ttk.Entry(self, textvariable=self.IR1)
+        entry_IR1.place(x=550, y=50)
         #self.GH111 = str(entry_GH1.get())
-        label_GH2 = tk.Label(self, text="GH_2", font=LARGE_FONT)
-        label_GH2.place(x=50,y=80)
-        label_GH2unit = tk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
-        label_GH2unit.place(x=300,y=80)
-        label_IR2 = tk.Label(self, text="IR_2", font=LARGE_FONT)
-        label_IR2.place(x=500,y=80) 
-        label_IR2unit = tk.Label(self, text="mol/L", font=LARGE_FONT)
-        label_IR2unit.place(x=750,y=80)
+        label_GH2 = ttk.Label(self, text="GH_2", font=LARGE_FONT)
+        label_GH2.place(x=50,y=100)
+        label_GH2unit = ttk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
+        label_GH2unit.place(x=300,y=100)
+        label_IR2 = ttk.Label(self, text="IR_2", font=LARGE_FONT)
+        label_IR2.place(x=500,y=100) 
+        label_IR2unit = ttk.Label(self, text="mol/L", font=LARGE_FONT)
+        label_IR2unit.place(x=750,y=100)
         self.GH2 = tk.StringVar()
         self.IR2 = tk.StringVar()
         entry_GH2 = ttk.Entry(self, textvariable=self.GH2)
-        entry_GH2.place(x=90, y=80)
+        entry_GH2.place(x=100, y=100)
         entry_IR2 = ttk.Entry(self, textvariable=self.IR2)
-        entry_IR2.place(x=540, y=80)
+        entry_IR2.place(x=550, y=100)
 
-        label_GH3 = tk.Label(self, text="GH_3", font=LARGE_FONT)
-        label_GH3.place(x=50,y=110)
-        label_GH3unit = tk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
-        label_GH3unit.place(x=300,y=110)
-        label_IR3 = tk.Label(self, text="IR_3", font=LARGE_FONT)
-        label_IR3.place(x=500,y=110) 
-        label_IR3unit = tk.Label(self, text="mol/L", font=LARGE_FONT)
-        label_IR3unit.place(x=750,y=110)
+        label_GH3 = ttk.Label(self, text="GH_3", font=LARGE_FONT)
+        label_GH3.place(x=50,y=150)
+        label_GH3unit = ttk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
+        label_GH3unit.place(x=300,y=150)
+        label_IR3 = ttk.Label(self, text="IR_3", font=LARGE_FONT)
+        label_IR3.place(x=500,y=150) 
+        label_IR3unit = ttk.Label(self, text="mol/L", font=LARGE_FONT)
+        label_IR3unit.place(x=750,y=150)
         self.GH3 = tk.StringVar()
         self.IR3 = tk.StringVar()
         entry_GH3 = ttk.Entry(self, textvariable=self.GH3)
-        entry_GH3.place(x=90, y=110)
+        entry_GH3.place(x=100, y=150)
         entry_IR3 = ttk.Entry(self, textvariable=self.IR3)
-        entry_IR3.place(x=540, y=110)
+        entry_IR3.place(x=550, y=150)
 
-        label_GH4 = tk.Label(self, text="GH_4", font=LARGE_FONT)
-        label_GH4.place(x=50,y=140)
-        label_GH4unit = tk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
-        label_GH4unit.place(x=300,y=140)
-        label_IR4 = tk.Label(self, text="IR_4", font=LARGE_FONT)
-        label_IR4.place(x=500,y=140) 
-        label_IR4unit = tk.Label(self, text="mol/L", font=LARGE_FONT)
-        label_IR4unit.place(x=750,y=140)
+        label_GH4 = ttk.Label(self, text="GH_4", font=LARGE_FONT)
+        label_GH4.place(x=50,y=200)
+        label_GH4unit = ttk.Label(self, text="mol/(L^2)", font=LARGE_FONT)
+        label_GH4unit.place(x=300,y=200)
+        label_IR4 = ttk.Label(self, text="IR_4", font=LARGE_FONT)
+        label_IR4.place(x=500,y=200) 
+        label_IR4unit = ttk.Label(self, text="mol/L", font=LARGE_FONT)
+        label_IR4unit.place(x=750,y=200)
         self.GH4 = tk.StringVar()
         self.IR4 = tk.StringVar()
         entry_GH4 = ttk.Entry(self, textvariable=self.GH4)
-        entry_GH4.place(x=90, y=140)
+        entry_GH4.place(x=100, y=200)
         entry_IR4 = ttk.Entry(self, textvariable=self.IR4)
-        entry_IR4.place(x=540, y=140)
+        entry_IR4.place(x=550, y=200)
 
-        self.GH1.set("1.2")
-        self.IR1.set("2.0")
-        self.GH2.set("1.9")
-        self.IR2.set("3.9")
-        self.GH3.set("3.0")
-        self.IR3.set("6.1")
-        self.GH4.set("4.2")
-        self.IR4.set("7.9")
+        label_IC = ttk.Label(self, text = "Ionic Capacity", font=LARGE_FONT)
+        label_IC.place(x=50,y=250)
+        label_ICunit = ttk.Label(self, text="mM", font=LARGE_FONT)
+        label_ICunit.place(x=350, y=250)
+        self.IC = tk.StringVar()
+        entry_IC = ttk.Entry(self,textvariable=self.IC)
+        entry_IC.place(x=150, y=250)
+
+        self.GH1.set("34.41")
+        self.IR1.set("0.2393")
+        self.GH2.set("17.21")
+        self.IR2.set("0.2295")
+        self.GH3.set("11.47")
+        self.IR3.set("0.2200")
+        self.GH4.set("8.60")
+        self.IR4.set("0.2151")
+        self.IC.set("105.58")
 
 
 
         button_confirm = ttk.Button(self, text="Enter", width = 50, command=lambda: controller.show_frame(PlotPage))
-        button_confirm.place(x=400, y=200)
+        button_confirm.place(x=400, y=350)
         button1 = ttk.Button(self, text="Back to Home",command=lambda: controller.show_frame(StartPage))
         button1.pack(side='bottom')
 
@@ -290,8 +299,8 @@ class PlotPage(tk.Frame):
         self.y_pre = self.m * self.x + self.n
 
         self.a.clear()
-        self.a.scatter(self.x, self.y)
-        self.a.plot(self.x, self.y_pre, '--')
+        self.a.scatter(self.x, self.y, color='orange')
+        self.a.plot(self.x, self.y_pre, 'b--')
         self.a.set_ylabel('log(GH)')
         self.a.set_xlabel('log(IR)')
         self.canvas.draw()
@@ -350,12 +359,40 @@ class ResultPage(tk.Frame):
 
     def update(self):
         plotpage = self.controller.get_page(PlotPage)
+        inputpage = self.controller.get_page(InputPage)
+        self.IC = float(inputpage.IC.get())*0.001
         self.m = float(plotpage.m)
         self.n = float(plotpage.n)
         self.B = self.m - 1
-        self.IC = 105.58 * 0.11 # This value needs further modification.
-        self.Keq = np.power(10,-self.n/(self.m*np.power(self.IC,self.B)))
-        self.label1['text']="slope should be %10.5f and interception should be %10.5f, Keq should be %10.5f"%(self.m, self.n, self.Keq)
+        #self.IC = 105.58 * 0.001 # This value needs further modification.
+        self.Keq = np.power(10,-self.n)/(self.m*np.power(self.IC,self.B))
+
+        self.I = np.arange(20,500,5)
+        self.len_I = len(self.I)
+        self.k = -1*np.ones(self.len_I)
+        self.flag = 0
+        self.best_k = -111
+        self.best_I = -111
+        for i,j in zip(self.I, np.arange(self.len_I)):
+            self.k[j] = self.Keq*np.power(self.IC,self.B)*np.power(i*0.001,-self.B)+0.8
+            #self.k[j] = self.Keq*np.power(0.10558,11.68473)*np.power(i*0.001,-11.68473)+0.8
+            if self.k[j] < 0.81 and self.flag == 0:
+                self.best_k = self.k[j]
+                self.best_I = i
+                self.flag = 1
+                #print(self.IC,self.B)
+        self.a.clear()
+        #fig = plt.figure(figsize=(20,8),dpi=80)
+        #ax = fig.add_subplot(111)
+        self.a.plot(self.I,self.k,'b-')
+        self.a.scatter(self.best_I, self.best_k,color='r')
+        self.a.annotate('best choice I =%6.2f mM, K =%6.2f mM'%(self.best_I, self.best_k), xy=(self.best_I, self.best_k), 
+            xytext = (+50,+50), textcoords='offset points',xycoords='data',  
+            fontsize=16, arrowprops=dict(arrowstyle='->', connectionstyle="arc3,rad=.2"))
+        self.a.set_ylabel('K')
+        self.a.set_xlabel('Ionic Concentration(mM)')
+        self.canvas.draw()
+        self.label1['text']="slope:%5.2f,  interception:%5.2f,  B:%5.2f,  Keq:%5.2f"%(self.m, self.n, self.B, self.Keq)
 
 
 
